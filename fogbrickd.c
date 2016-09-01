@@ -33,6 +33,19 @@ void *wasteTime(void *arg){
 	return NULL;
 }
 
+void *wasteHalfTime(void *arg){
+	/* This function wastes time at half efficiency */
+	int i = 0;
+	int j = 0;
+	printf("50% thread launched!");
+	while ( i == 0 ){
+		j++;
+		j--;
+		usleep(1);
+	}
+	return NULL;
+}
+
 int getCPUCount(){
 	int cpucount = 0;
 	cpucount = sysconf(_SC_NPROCESSORS_ONLN);
